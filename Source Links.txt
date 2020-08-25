@@ -1,0 +1,3 @@
+Source-1: PhishTank: http://data.phishtank.com/data/online-valid.xml
+Source-2: UCI ML repo: https://www.kaggle.com/akashkr/phishing-website-dataset/download
+Source-3: Mendeley Data: https://data.mendeley.com/datasets/h3cgnj8hft/1/files/84a399ef-c57e-4ee6-9207-7bffb5ace261/Phishing_Legitimate_full.arff?dl=1
