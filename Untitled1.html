@@ -13117,16 +13117,30 @@ div#notebook {
 
 
 
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="python_pandas.jpg" alt="Python" style="width: 400px;"/></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Results-of-Applied-ML-techniques">Results of Applied ML techniques<a class="anchor-link" href="#Results-of-Applied-ML-techniques">&#182;</a></h1>
+</div>
+</div>
+</div>
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span>
 <span class="n">data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;phisingdataset.xlsx&quot;</span><span class="p">,</span><span class="n">header</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;having_IP_Address&quot;</span><span class="p">,</span><span class="s2">&quot;URL_Length&quot;</span><span class="p">,</span><span class="s2">&quot;Shortining_Service&quot;</span><span class="p">,</span><span class="s2">&quot;having_At_Symbol&quot;</span><span class="p">,</span><span class="s2">&quot;double_slash_redirecting&quot;</span><span class="p">,</span><span class="s2">&quot;Prefix_Suffix&quot;</span><span class="p">,</span>
@@ -13143,13 +13157,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># c) divide data in input and target</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="c1"># c) divide data in input and target</span>
 <span class="n">Y</span><span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s2">&quot;Result&quot;</span><span class="p">]</span>
 <span class="n">X</span><span class="o">=</span><span class="n">data</span><span class="p">[[</span><span class="s2">&quot;having_IP_Address&quot;</span><span class="p">,</span><span class="s2">&quot;URL_Length&quot;</span><span class="p">,</span><span class="s2">&quot;Shortining_Service&quot;</span><span class="p">,</span><span class="s2">&quot;having_At_Symbol&quot;</span><span class="p">,</span><span class="s2">&quot;double_slash_redirecting&quot;</span><span class="p">,</span><span class="s2">&quot;Prefix_Suffix&quot;</span><span class="p">,</span>
 <span class="s2">&quot;having_Sub_Domain&quot;</span><span class="p">,</span><span class="s2">&quot;SSLfinal_State&quot;</span><span class="p">,</span><span class="s2">&quot;Domain_registeration_length&quot;</span><span class="p">,</span><span class="s2">&quot;Favicon&quot;</span><span class="p">,</span><span class="s2">&quot;port&quot;</span><span class="p">,</span><span class="s2">&quot;HTTPS_token&quot;</span><span class="p">,</span><span class="s2">&quot;Request_URL&quot;</span><span class="p">,</span><span class="s2">&quot;URL_of_Anchor&quot;</span><span class="p">,</span>
@@ -13165,13 +13180,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Normalisation of Data</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="c1">#  Normalisation of Data</span>
 <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
 <span class="n">sc</span><span class="o">=</span><span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">standard_scaler</span><span class="o">=</span><span class="n">sc</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
@@ -13191,13 +13207,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="n">x</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="mi">30</span><span class="p">]</span>
 <span class="n">y</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:,</span><span class="mi">30</span><span class="p">]</span>
 </pre></div>
 
@@ -13209,13 +13226,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">x_test</span><span class="p">,</span><span class="n">y_train</span><span class="p">,</span><span class="n">y_test</span><span class="p">)</span><span class="o">=</span><span class="n">train_test_split</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">train_size</span><span class="o">=</span><span class="mf">0.7</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
@@ -13227,46 +13245,14 @@ div#notebook {
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#  Applying Random Forest </span>
-
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="n">feat_lables</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<span class="n">forest</span><span class="o">=</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">forest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-<span class="sd">&#39;&#39;&#39;importances=forest.feature_importances_</span>
-<span class="sd">indices=np.argsort(importances)[::-1]</span>
-<span class="sd">for f in range (x_train.shape[1]):</span>
-<span class="sd">    print(&quot;(%2d) %-*s %f&quot;%(f+1,30,feat_lables[indices[f]],importances[indices[f]]))</span>
-<span class="sd">plt.title(&quot;Feature Importances&quot;)</span>
-<span class="sd">plt.bar(range(x_train.shape[1]),</span>
-<span class="sd">        importances[indices],</span>
-<span class="sd">        color=&#39;lightblue&#39;,</span>
-<span class="sd">        align=&quot;center&quot;)</span>
-<span class="sd">plt.xticks(range(x_train.shape[1]),</span>
-<span class="sd">           feat_lables[indices],rotation=90)</span>
-<span class="sd">plt.xlim([-1,x_train.shape[1]])</span>
-<span class="sd">plt.tight_layout()</span>
-<span class="sd">plt.show()</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="c1">#################################</span>
-<span class="n">y_pred</span><span class="o">=</span><span class="n">forest</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="n">acc</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-<span class="n">cm</span><span class="o">=</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="n">cpr</span><span class="o">=</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cpr</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="c1">#  Applying Random Forest </span>
 </pre></div>
 
     </div>
@@ -13305,36 +13291,37 @@ weighted avg       0.97      0.97      0.97      3317
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Applying SVM model</span>
-<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="kn">import</span> <span class="n">SVC</span>
-<span class="n">sv</span><span class="o">=</span><span class="n">SVC</span><span class="p">(</span><span class="n">C</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">kernel</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span> <span class="c1"># C is constant</span>
-<span class="n">sv</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-<span class="n">train_pred</span><span class="o">=</span><span class="n">sv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_train</span><span class="p">)</span>
-<span class="n">test_pred</span><span class="o">=</span><span class="n">sv</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Missclassified sample: &quot;</span><span class="p">,(</span><span class="n">test_pred</span><span class="o">!=</span><span class="n">y_test</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="c1"># Applying SVM model</span>
+<span class="sd">&#39;&#39;&#39;from sklearn.svm import SVC</span>
+<span class="sd">sv=SVC(C=10,kernel=&#39;linear&#39;) # C is constant</span>
+<span class="sd">sv.fit(x_train,y_train)</span>
+<span class="sd">train_pred=sv.predict(x_train)</span>
+<span class="sd">test_pred=sv.predict(x_test)</span>
+<span class="sd">print(&quot;Missclassified sample: &quot;,(test_pred!=y_test).sum())</span>
 
-<span class="c1"># Computing accuracy</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="n">train_acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span><span class="n">train_pred</span><span class="p">)</span>
-<span class="n">test_acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">test_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Traning accuracy:&quot;</span><span class="p">,</span><span class="n">train_acc</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Testing accuracy:&quot;</span><span class="p">,</span><span class="n">test_acc</span><span class="p">)</span>
+<span class="sd"># Computing accuracy</span>
+<span class="sd">from sklearn.metrics import accuracy_score</span>
+<span class="sd">train_acc=accuracy_score(y_train,train_pred)</span>
+<span class="sd">test_acc=accuracy_score(y_test,test_pred)</span>
+<span class="sd">print(&quot;Traning accuracy:&quot;,train_acc)</span>
+<span class="sd">print(&quot;Testing accuracy:&quot;,test_acc)</span>
 
-<span class="c1"># Classification report</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
-<span class="n">cr</span><span class="o">=</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">test_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cr</span><span class="p">)</span>
+<span class="sd"># Classification report</span>
+<span class="sd">from sklearn.metrics import classification_report</span>
+<span class="sd">cr=classification_report(y_test,test_pred)</span>
+<span class="sd">print(cr)</span>
 
-<span class="c1"># confusion matrics</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
-<span class="n">cm</span><span class="o">=</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">test_pred</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+<span class="sd"># confusion matrics</span>
+<span class="sd">from sklearn.metrics import confusion_matrix</span>
+<span class="sd">cm=confusion_matrix(y_test,test_pred)</span>
+<span class="sd">print(cm)&#39;&#39;&#39;</span>
 </pre></div>
 
     </div>
@@ -13381,34 +13368,7 @@ weighted avg       0.92      0.92      0.92      3317
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># implement Bagging classifier Perceptron , perceptron with pipelining </span>
-<span class="c1"># Combine all these using majority voting classifier</span>
-
-<span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Perceptron</span>
-<span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">VotingClassifier</span>
-
-<span class="n">clf1</span><span class="o">=</span><span class="n">Perceptron</span><span class="p">()</span>
-<span class="n">clf2</span><span class="o">=</span><span class="n">Pipeline</span><span class="p">([[</span><span class="s1">&#39;SC&#39;</span><span class="p">,</span><span class="n">StandardScaler</span><span class="p">()],[</span><span class="s1">&#39;PPN&#39;</span><span class="p">,</span><span class="n">clf1</span><span class="p">]])</span>
-<span class="n">clf3</span><span class="o">=</span><span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">clf4</span><span class="o">=</span><span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
-<span class="n">clf5</span><span class="o">=</span><span class="n">VotingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;PPN&#39;</span><span class="p">,</span><span class="n">clf1</span><span class="p">),(</span><span class="s2">&quot;Pipe&quot;</span><span class="p">,</span><span class="n">clf2</span><span class="p">),(</span><span class="s2">&quot;Bag&quot;</span><span class="p">,</span><span class="n">clf3</span><span class="p">),(</span><span class="s2">&quot;Ada&quot;</span><span class="p">,</span><span class="n">clf4</span><span class="p">)]</span>
-                      <span class="p">,</span><span class="n">voting</span><span class="o">=</span><span class="s1">&#39;hard&#39;</span>
-                      <span class="p">,</span><span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">clf</span><span class="o">=</span><span class="p">[</span><span class="n">clf1</span><span class="p">,</span><span class="n">clf2</span><span class="p">,</span><span class="n">clf3</span><span class="p">,</span><span class="n">clf4</span><span class="p">,</span><span class="n">clf5</span><span class="p">]</span>
-<span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Perceptron&quot;</span><span class="p">,</span><span class="s2">&quot;Pipeline perceptron&quot;</span><span class="p">,</span><span class="s2">&quot;Bagging&quot;</span><span class="p">,</span><span class="s2">&quot;AdaBoost&quot;</span><span class="p">,</span><span class="s2">&quot;Ensemble&quot;</span><span class="p">]</span>
-<span class="n">score</span><span class="o">=</span><span class="p">[]</span>
-<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
-<span class="k">for</span>  <span class="n">model</span> <span class="ow">in</span> <span class="n">clf</span><span class="p">:</span>
-    <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
-    <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
-    <span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
-    <span class="n">score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
-<span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="s2">&quot; := &quot;</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
     </div>
@@ -13440,19 +13400,20 @@ Ensemble  :=  0.9369912571600845
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="p">{}</span> 
-<span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">name</span><span class="p">:</span> 
-    <span class="k">for</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">score</span><span class="p">:</span> 
-        <span class="n">res</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span> 
-        <span class="n">score</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">value</span><span class="p">)</span> 
-        <span class="k">break</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="sd">&#39;&#39;&#39;res = {} </span>
+<span class="sd">for key in name: </span>
+<span class="sd">    for value in score: </span>
+<span class="sd">        res[key] = value </span>
+<span class="sd">        score.remove(value) </span>
+<span class="sd">        break</span>
+<span class="sd">print(res)&#39;&#39;&#39;</span>
 </pre></div>
 
     </div>
@@ -13480,13 +13441,14 @@ Ensemble  :=  0.9369912571600845
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     
     <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="s1">&#39;Logistic Regression&#39;</span><span class="p">):</span>
         <span class="c1"># Logistic Regression</span>
@@ -13526,8 +13488,69 @@ Ensemble  :=  0.9369912571600845
         <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
         <span class="n">cm</span><span class="o">=</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">test_pred</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>  
-    <span class="k">elif</span><span class="p">(</span><span class="n">x</span> <span class="ow">in</span> <span class="n">name</span><span class="p">):</span>
-        <span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">[</span><span class="n">x</span><span class="p">])</span>
+    <span class="k">elif</span><span class="p">(</span><span class="n">x</span><span class="o">==</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">):</span>
+        <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+        <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestClassifier</span>
+        <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+        <span class="n">feat_lables</span><span class="o">=</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+        <span class="n">forest</span><span class="o">=</span><span class="n">RandomForestClassifier</span><span class="p">(</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">10000</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">forest</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+        <span class="sd">&#39;&#39;&#39;importances=forest.feature_importances_</span>
+<span class="sd">        indices=np.argsort(importances)[::-1]</span>
+<span class="sd">        for f in range (x_train.shape[1]):</span>
+<span class="sd">            print(&quot;(%2d) %-*s %f&quot;%(f+1,30,feat_lables[indices[f]],importances[indices[f]]))</span>
+<span class="sd">        plt.title(&quot;Feature Importances&quot;)</span>
+<span class="sd">        plt.bar(range(x_train.shape[1]),</span>
+<span class="sd">                importances[indices],</span>
+<span class="sd">                color=&#39;lightblue&#39;,</span>
+<span class="sd">                align=&quot;center&quot;)</span>
+<span class="sd">        plt.xticks(range(x_train.shape[1]),</span>
+<span class="sd">                   feat_lables[indices],rotation=90)</span>
+<span class="sd">        plt.xlim([-1,x_train.shape[1]])</span>
+<span class="sd">        plt.tight_layout()</span>
+<span class="sd">        plt.show()</span>
+<span class="sd">        &#39;&#39;&#39;</span>
+        <span class="c1">#################################</span>
+        <span class="n">y_pred</span><span class="o">=</span><span class="n">forest</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+        <span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Accuracy:&quot;</span><span class="p">,</span><span class="n">acc</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
+        <span class="n">cm</span><span class="o">=</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cm</span><span class="p">)</span>
+        <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+        <span class="n">cpr</span><span class="o">=</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span><span class="n">y_pred</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">cpr</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># nbi:hide_in</span>
+        <span class="c1"># implement Bagging classifier Perceptron , perceptron with pipelining </span>
+        <span class="c1"># Combine all these using majority voting classifier</span>
+
+        <span class="kn">from</span> <span class="nn">sklearn.linear_model</span> <span class="kn">import</span> <span class="n">Perceptron</span>
+        <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="kn">import</span> <span class="n">DecisionTreeClassifier</span>
+        <span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="kn">import</span> <span class="n">Pipeline</span>
+        <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">BaggingClassifier</span>
+        <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">AdaBoostClassifier</span>
+        <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">VotingClassifier</span>
+
+        <span class="n">clf1</span><span class="o">=</span><span class="n">Perceptron</span><span class="p">()</span>
+        <span class="n">clf2</span><span class="o">=</span><span class="n">Pipeline</span><span class="p">([[</span><span class="s1">&#39;SC&#39;</span><span class="p">,</span><span class="n">StandardScaler</span><span class="p">()],[</span><span class="s1">&#39;PPN&#39;</span><span class="p">,</span><span class="n">clf1</span><span class="p">]])</span>
+        <span class="n">clf3</span><span class="o">=</span><span class="n">BaggingClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">clf4</span><span class="o">=</span><span class="n">AdaBoostClassifier</span><span class="p">(</span><span class="n">base_estimator</span><span class="o">=</span><span class="n">DecisionTreeClassifier</span><span class="p">(),</span><span class="n">n_estimators</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+        <span class="n">clf5</span><span class="o">=</span><span class="n">VotingClassifier</span><span class="p">(</span><span class="n">estimators</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;PPN&#39;</span><span class="p">,</span><span class="n">clf1</span><span class="p">),(</span><span class="s2">&quot;Pipe&quot;</span><span class="p">,</span><span class="n">clf2</span><span class="p">),(</span><span class="s2">&quot;Bag&quot;</span><span class="p">,</span><span class="n">clf3</span><span class="p">),(</span><span class="s2">&quot;Ada&quot;</span><span class="p">,</span><span class="n">clf4</span><span class="p">)]</span>
+                              <span class="p">,</span><span class="n">voting</span><span class="o">=</span><span class="s1">&#39;hard&#39;</span>
+                              <span class="p">,</span><span class="n">weights</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">clf</span><span class="o">=</span><span class="p">[</span><span class="n">clf1</span><span class="p">,</span><span class="n">clf2</span><span class="p">,</span><span class="n">clf3</span><span class="p">,</span><span class="n">clf4</span><span class="p">,</span><span class="n">clf5</span><span class="p">]</span>
+        <span class="n">name</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Perceptron&quot;</span><span class="p">,</span><span class="s2">&quot;Pipeline perceptron&quot;</span><span class="p">,</span><span class="s2">&quot;Bagging&quot;</span><span class="p">,</span><span class="s2">&quot;AdaBoost&quot;</span><span class="p">,</span><span class="s2">&quot;Ensemble&quot;</span><span class="p">]</span>
+        <span class="n">score</span><span class="o">=</span><span class="p">[]</span>
+        <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">accuracy_score</span>
+        <span class="k">for</span>  <span class="n">model</span> <span class="ow">in</span> <span class="n">clf</span><span class="p">:</span>
+            <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">x_train</span><span class="p">,</span><span class="n">y_train</span><span class="p">)</span>
+            <span class="n">y_pred</span><span class="o">=</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">x_test</span><span class="p">)</span>
+            <span class="n">acc</span><span class="o">=</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+            <span class="n">score</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">c</span><span class="p">,</span><span class="n">s</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="n">score</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span><span class="s2">&quot; := &quot;</span><span class="p">,</span><span class="n">s</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -13538,13 +13561,14 @@ Ensemble  :=  0.9369912571600845
 
   
 
-  <div class="
+  <div class="nbinteract-hide_in
       cell border-box-sizing code_cell rendered">
     <div class="input">
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">interact</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Perceptron&#39;</span><span class="p">,</span><span class="s1">&#39;Pipeline perceptron&#39;</span><span class="p">,</span><span class="s1">&#39;Logistic Regression&#39;</span><span class="p">,</span><span class="s1">&#39;SVM&#39;</span><span class="p">,</span><span class="s1">&#39;Bagging&#39;</span><span class="p">,</span><span class="s1">&#39;Adaboost&#39;</span><span class="p">,</span><span class="s1">&#39;Ensemble&#39;</span><span class="p">])</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># nbi:hide_in</span>
+<span class="n">interact</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;SVM&#39;</span><span class="p">,</span><span class="s1">&#39;Bagging&#39;</span><span class="p">,</span><span class="s1">&#39;Adaboost&#39;</span><span class="p">,</span><span class="s1">&#39;Ensemble&#39;</span><span class="p">,</span><span class="s1">&#39;Random Forest&#39;</span><span class="p">,</span><span class="s1">&#39;Perceptron&#39;</span><span class="p">,</span><span class="s1">&#39;Pipeline perceptron&#39;</span><span class="p">,</span><span class="s1">&#39;Logistic Regression&#39;</span><span class="p">])</span>
 </pre></div>
 
     </div>
